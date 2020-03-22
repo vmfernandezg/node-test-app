@@ -35,6 +35,7 @@ node('nodejs') {
         } catch (Exception e) {
             sh("echo \"fail deleting dc \"")
         }
+         try {
             sh("oc delete svc hello-react")
         } catch (Exception e) {
             sh("echo \"fail deleting svc \"")
