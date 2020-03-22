@@ -21,6 +21,11 @@ node('nodejs') {
     }
     stage ('deploy') {
         try {
+            sh("oc project pruebas")
+        } catch (Exception e) {
+            sh("echo \"fail project pruebas \"")
+        }
+        try {
             sh("oc delete bc hello-react")
         } catch (Exception e) {
             sh("echo \"fail deleting bc \"")
