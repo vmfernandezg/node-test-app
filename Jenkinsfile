@@ -1,4 +1,4 @@
-def gitRepo="https://github.com/ariemay/node-test-app.git"
+def gitRepo="https://github.com/vmfernandezg/node-test-app.git"
 def branch="master"
 
 node('nodejs') {
